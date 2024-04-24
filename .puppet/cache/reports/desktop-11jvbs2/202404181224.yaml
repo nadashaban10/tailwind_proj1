@@ -1,0 +1,432 @@
+--- !ruby/object:Puppet::Transaction::Report
+host: desktop-11jvbs2
+time: '2024-04-18T14:24:52.976390076+02:00'
+configuration_version: 1713443092
+transaction_uuid: 6603e42f-1629-4d30-9fa0-97d114084d9d
+report_format: 10
+puppet_version: 5.5.10
+status: failed
+transaction_completed: true
+noop: false
+noop_pending: false
+environment: production
+logs:
+- level: notice
+  message: 'sed: couldn''t open temporary file /etc/default/sedwEfjHc: Permission
+    denied'
+  source: "/Stage[main]/Main/Exec[fix--for-nginx]/returns"
+  tags:
+  - notice
+  - exec
+  - fix--for-nginx
+  - class
+  - returns
+  time: '2024-04-18T14:24:52.994650676+02:00'
+  file: "/home/nada/alx-system_engineering-devops/0x1B-web_stack_debugging_4/0-the_sky_is_the_limit_not.pp"
+  line: 4
+- level: err
+  message: '''sed -i "s/15/4096/" /etc/default/nginx'' returned 4 instead of one of
+    [0]'
+  source: Puppet
+  tags:
+  - err
+  time: '2024-04-18T14:24:52.994879076+02:00'
+  file: 
+  line: 
+- level: err
+  message: 'change from ''notrun'' to [''0''] failed: ''sed -i "s/15/4096/" /etc/default/nginx''
+    returned 4 instead of one of [0]'
+  source: "/Stage[main]/Main/Exec[fix--for-nginx]/returns"
+  tags:
+  - err
+  - exec
+  - fix--for-nginx
+  - class
+  time: '2024-04-18T14:24:52.996064176+02:00'
+  file: "/home/nada/alx-system_engineering-devops/0x1B-web_stack_debugging_4/0-the_sky_is_the_limit_not.pp"
+  line: 4
+- level: notice
+  message: 'Restarting nginx (via systemctl): nginx.serviceFailed to restart nginx.service:
+    Interactive authentication required.'
+  source: "/Stage[main]/Main/Exec[nginx-restart]/returns"
+  tags:
+  - notice
+  - exec
+  - nginx-restart
+  - class
+  - returns
+  time: '2024-04-18T14:24:53.094559480+02:00'
+  file: "/home/nada/alx-system_engineering-devops/0x1B-web_stack_debugging_4/0-the_sky_is_the_limit_not.pp"
+  line: 10
+- level: notice
+  message: See system logs and 'systemctl status nginx.service' for details.
+  source: "/Stage[main]/Main/Exec[nginx-restart]/returns"
+  tags:
+  - notice
+  - exec
+  - nginx-restart
+  - class
+  - returns
+  time: '2024-04-18T14:24:53.094692580+02:00'
+  file: "/home/nada/alx-system_engineering-devops/0x1B-web_stack_debugging_4/0-the_sky_is_the_limit_not.pp"
+  line: 10
+- level: notice
+  message: " failed!"
+  source: "/Stage[main]/Main/Exec[nginx-restart]/returns"
+  tags:
+  - notice
+  - exec
+  - nginx-restart
+  - class
+  - returns
+  time: '2024-04-18T14:24:53.094794280+02:00'
+  file: "/home/nada/alx-system_engineering-devops/0x1B-web_stack_debugging_4/0-the_sky_is_the_limit_not.pp"
+  line: 10
+- level: err
+  message: "'nginx restart' returned 1 instead of one of [0]"
+  source: Puppet
+  tags:
+  - err
+  time: '2024-04-18T14:24:53.094910980+02:00'
+  file: 
+  line: 
+- level: err
+  message: 'change from ''notrun'' to [''0''] failed: ''nginx restart'' returned 1
+    instead of one of [0]'
+  source: "/Stage[main]/Main/Exec[nginx-restart]/returns"
+  tags:
+  - err
+  - exec
+  - nginx-restart
+  - class
+  time: '2024-04-18T14:24:53.095653580+02:00'
+  file: "/home/nada/alx-system_engineering-devops/0x1B-web_stack_debugging_4/0-the_sky_is_the_limit_not.pp"
+  line: 10
+- level: notice
+  message: Applied catalog in 0.13 seconds
+  source: Puppet
+  tags:
+  - notice
+  time: '2024-04-18T14:24:53.110840081+02:00'
+  file: 
+  line: 
+metrics:
+  resources:
+    name: resources
+    label: Resources
+    values:
+    - - total
+      - Total
+      - 9
+    - - skipped
+      - Skipped
+      - 0
+    - - failed
+      - Failed
+      - 2
+    - - failed_to_restart
+      - Failed to restart
+      - 0
+    - - restarted
+      - Restarted
+      - 0
+    - - changed
+      - Changed
+      - 0
+    - - out_of_sync
+      - Out of sync
+      - 2
+    - - scheduled
+      - Scheduled
+      - 0
+    - - corrective_change
+      - Corrective change
+      - 0
+  time:
+    name: time
+    label: Time
+    values:
+    - - exec
+      - Exec
+      - 0.110628104
+    - - schedule
+      - Schedule
+      - 0.0002261
+    - - filebucket
+      - Filebucket
+      - 6.42e-05
+    - - config_retrieval
+      - Config retrieval
+      - 0.033859502
+    - - transaction_evaluation
+      - Transaction evaluation
+      - 0.1135667039998225
+    - - catalog_application
+      - Catalog application
+      - 0.13054770500093582
+    - - total
+      - Total
+      - 0.130914505
+  changes:
+    name: changes
+    label: Changes
+    values:
+    - - total
+      - Total
+      - 0
+  events:
+    name: events
+    label: Events
+    values:
+    - - total
+      - Total
+      - 2
+    - - failure
+      - Failure
+      - 2
+    - - success
+      - Success
+      - 0
+resource_statuses:
+  Exec[fix--for-nginx]:
+    title: fix--for-nginx
+    file: "/home/nada/alx-system_engineering-devops/0x1B-web_stack_debugging_4/0-the_sky_is_the_limit_not.pp"
+    line: 4
+    resource: Exec[fix--for-nginx]
+    resource_type: Exec
+    provider_used: posix
+    containment_path:
+    - Stage[main]
+    - Main
+    - Exec[fix--for-nginx]
+    evaluation_time: 0.0113448
+    tags:
+    - exec
+    - fix--for-nginx
+    - class
+    time: '2024-04-18T14:24:52.984895976+02:00'
+    failed: true
+    failed_to_restart: false
+    changed: false
+    out_of_sync: true
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 1
+    events:
+    - audited: false
+      property: returns
+      previous_value: notrun
+      desired_value:
+      - '0'
+      historical_value: 
+      message: 'change from ''notrun'' to [''0''] failed: ''sed -i "s/15/4096/" /etc/default/nginx''
+        returned 4 instead of one of [0]'
+      name: executed_command
+      status: failure
+      time: '2024-04-18T14:24:52.994981376+02:00'
+      redacted: 
+      corrective_change: false
+    corrective_change: false
+  Exec[nginx-restart]:
+    title: nginx-restart
+    file: "/home/nada/alx-system_engineering-devops/0x1B-web_stack_debugging_4/0-the_sky_is_the_limit_not.pp"
+    line: 10
+    resource: Exec[nginx-restart]
+    resource_type: Exec
+    provider_used: posix
+    containment_path:
+    - Stage[main]
+    - Main
+    - Exec[nginx-restart]
+    evaluation_time: 0.099283304
+    tags:
+    - exec
+    - nginx-restart
+    - class
+    time: '2024-04-18T14:24:52.996462876+02:00'
+    failed: true
+    failed_to_restart: false
+    changed: false
+    out_of_sync: true
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 1
+    events:
+    - audited: false
+      property: returns
+      previous_value: notrun
+      desired_value:
+      - '0'
+      historical_value: 
+      message: 'change from ''notrun'' to [''0''] failed: ''nginx restart'' returned
+        1 instead of one of [0]'
+      name: executed_command
+      status: failure
+      time: '2024-04-18T14:24:53.095032280+02:00'
+      redacted: 
+      corrective_change: false
+    corrective_change: false
+  Schedule[puppet]:
+    title: puppet
+    file: 
+    line: 
+    resource: Schedule[puppet]
+    resource_type: Schedule
+    provider_used: 
+    containment_path:
+    - Schedule[puppet]
+    evaluation_time: 8.24e-05
+    tags:
+    - schedule
+    - puppet
+    time: '2024-04-18T14:24:53.096031880+02:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[hourly]:
+    title: hourly
+    file: 
+    line: 
+    resource: Schedule[hourly]
+    resource_type: Schedule
+    provider_used: 
+    containment_path:
+    - Schedule[hourly]
+    evaluation_time: 3.25e-05
+    tags:
+    - schedule
+    - hourly
+    time: '2024-04-18T14:24:53.096163080+02:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[daily]:
+    title: daily
+    file: 
+    line: 
+    resource: Schedule[daily]
+    resource_type: Schedule
+    provider_used: 
+    containment_path:
+    - Schedule[daily]
+    evaluation_time: 3.08e-05
+    tags:
+    - schedule
+    - daily
+    time: '2024-04-18T14:24:53.096234780+02:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[weekly]:
+    title: weekly
+    file: 
+    line: 
+    resource: Schedule[weekly]
+    resource_type: Schedule
+    provider_used: 
+    containment_path:
+    - Schedule[weekly]
+    evaluation_time: 2.63e-05
+    tags:
+    - schedule
+    - weekly
+    time: '2024-04-18T14:24:53.096340280+02:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[monthly]:
+    title: monthly
+    file: 
+    line: 
+    resource: Schedule[monthly]
+    resource_type: Schedule
+    provider_used: 
+    containment_path:
+    - Schedule[monthly]
+    evaluation_time: 2.62e-05
+    tags:
+    - schedule
+    - monthly
+    time: '2024-04-18T14:24:53.096403680+02:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[never]:
+    title: never
+    file: 
+    line: 
+    resource: Schedule[never]
+    resource_type: Schedule
+    provider_used: 
+    containment_path:
+    - Schedule[never]
+    evaluation_time: 2.79e-05
+    tags:
+    - schedule
+    - never
+    time: '2024-04-18T14:24:53.096464480+02:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Filebucket[puppet]:
+    title: puppet
+    file: 
+    line: 
+    resource: Filebucket[puppet]
+    resource_type: Filebucket
+    provider_used: 
+    containment_path:
+    - Filebucket[puppet]
+    evaluation_time: 6.42e-05
+    tags:
+    - filebucket
+    - puppet
+    time: '2024-04-18T14:24:53.096561180+02:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+corrective_change: false
+catalog_uuid: a39e0b69-4178-4431-befd-d7d74c032ea6
+cached_catalog_status: not_used
